@@ -60,4 +60,7 @@ function registerUser(){
         confirm.style.border = "1px solid var(--alert-color)"
         alertConfirm.innerHTML = "As senhas não são iguais. Tente novamente."
     }
+    if(name.value != false && email.value != false && password.value != false && confirm.value != false){
+        open("../index.html")
+    }
 }

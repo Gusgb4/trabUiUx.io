@@ -17,17 +17,18 @@ function logInUser(user){
         alertEmail.innerHTML = "Campo vázio."       
     }
     if(email.value){ 
-        if(email.value != user.userEmail){
+        if(email.value != "user@gmail.com"){
             email.style.border = "1px solid var(--alert-color)"
             alertEmail.innerHTML = "Usuario não encontrado. Digite um usúario valido."
-            alert("foi")
         } 
-        if(email.value == user.userEmail){
+        if(email.value == "user@gmail.com"){
             email.style.border = "1px solid var(--color-01)"
             alertEmail.innerHTML = ""  
-            if(password.value != user.userPassword){
+            if(password.value != "12345678"){
                 password.style.border = "1px solid var(--alert-color)"
                 alertPassword.innerHTML = "Senha incorreta." 
+            }else{
+                window.open("../index.html")
             }
         }
     }
