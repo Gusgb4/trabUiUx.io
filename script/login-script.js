@@ -28,11 +28,10 @@ function logInUser(user){
                 password.style.border = "1px solid var(--alert-color)"
                 alertPassword.innerHTML = "Senha incorreta." 
             }else{
-                window.open("../index.html")
+                window.open("https://gusgb4.github.io/trabUiUx.io/index.html")
             }
         }
     }
-    
     // PASSWORD - Validação do Campo 
     if(!password.value){
         password.style.border = "1px solid var(--alert-color)"

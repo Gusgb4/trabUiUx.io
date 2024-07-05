@@ -61,6 +61,6 @@ function registerUser(){
         alertConfirm.innerHTML = "As senhas não são iguais. Tente novamente."
     }
     if(name.value != false && email.value != false && password.value != false && confirm.value != false){
-        open("../index.html")
+        open("https://gusgb4.github.io/trabUiUx.io/index.html")
     }
 }
