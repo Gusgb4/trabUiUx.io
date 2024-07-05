@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/css/checkout-style.css">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="imgs/logo-blue.svg" alt="404">
+        </nav>
+        <nav>
+            <img src="imgs/close.svg" alt="close" id="close">
+            <a href="carrinho.html"  class="back">Cancelar compra</a>
+        </nav>
+    </header>
+    <section id="alert">
+        <div id="alert-box">
+
+        </div>
+    </section>
+    <main>
+        <!--  Informar endereço  -->
+        <section class="input-info">
+            <div class="info-box" id="address">
+                <div class="top-box" onclick="hideShowAddress()">
+                    <h1>Endereço de Entrega</h1>
+                    <img src="imgs/arrow.svg" alt="arrow" class="arrow" id="arrow-address">
+                </div>
+                <div class="body-box" id="body-address">
+                    <hr>
+                    <form class="input-group">
+                        <div class="input-line">
+                            <input class="address-inp" type="text" name="name" id="name" placeholder="Nome">
+                            <div class="search-area">
+                                <input class="address-inp" type="number" name="cep" id="cep" class="cep-inp" placeholder="CEP">
+                                <img src="imgs/search.svg" alt="search" id="search" onclick="searchCEP()">
+                            </div>
+                        </div>
+                        <div class="input-line">
+                            <input class="address-inp" type="text" name="state" id="state" placeholder="Estado">
+                            <input class="address-inp" type="text" name="city" id="city" placeholder="Cidade">
+                        </div>
+                        <div class="input-line">
+                            <input class="address-inp" type="text" name="district" id="district" placeholder="Bairro">
+                            <input class="address-inp" type="text" name="street" id="street" placeholder="Rua">
+                        </div>
+                        <div class="input-line">
+                            <input class="address-inp" type="number" name="n" id="n" placeholder="Nº">
+                            <input class="address-inp" type="text" name="complement" id="complement" placeholder="Complemento">
+                        </div>
+                    </form>
+                    <input type="button" value="Confirmar Endereço" class="btn" onclick="showAddress()">
+                </div>
+            </div>
+            <!--  Informar Metodo de pagamento  -->
+            <div class="info-box" id="payment">
+                <div class="top-box" onclick="hideShowPayment()">
+                    <h1>Forma de Pagamento</h1>
+                    <img src="imgs/arrow.svg" alt="arrow" class="arrow" id="arrow-pay">
+                </div>
+                <div class="body-box" id="body-pay">
+                    <hr>
+                    <div class="option-pay">
+                        <input type="button" class="btn-pay" id="debit-btn" value="Débito" onclick="debit()">
+                        <input type="button" class="btn-pay" id="credit-btn" value="Crédito" onclick="credit()">
+                        <input type="button" class="btn-pay" id="pix-btn" value="Pix" onclick="pix()">
+                        <input type="button" class="btn-pay" id="boleto-btn" value="Boleto" onclick="boleto()">
+                    </div>
+
+                    <!--  Crédito  -->
+
+                    <div class="form-pay" id="credit-box">
+                        <div class="payment-methods">
+                            <form id="credit" class="option-method">
+                                <h2 id="title-methods">Dados do Cartão</h2>
+                                <div class="input-line">
+                                    <input type="text" name="name" class="card-input card-name" id="card-name-credit" placeholder="Nome no Cartão">
+                                </div>
+                                <div class="input-line">
+                                    <input type="number" name="number" id="card-number-credit" class="card-input card-number" placeholder="Número do Cartão">
+                                </div>
+                                <div class="input-line">
+                                    <input type="text" name="date" id="card-date-credit" class="card-input card-date" placeholder="mm/aa">
+                                    <input type="number" name="code" id="card-code-credit" class="card-input card-code" placeholder="CVV">
+                                </div>
+                            </form>
+                            <div class="help">
+                                <h2>Onde Encontrar?</h2>
+                                <img src="imgs/card.PNG" id="card-img" alt="card">
+                            </div>
+                        </div>
+                        <input type="button" value="Adicionar" class="btn" onclick="showPayment()">
+                    </div>
+
+                    <!--  Débito  -->
+                    <div class="form-pay" id="debit-box">
+                        <div class="payment-methods">
+                            <form id="credit" class="option-method">
+                                <h2 id="title-methods">Dados do Cartão</h2>
+                                <div class="input-line">
+                                    <input type="text" name="name" class="card-input card-name" id="card-name-debit" placeholder="Nome no Cartão">
+                                </div>
+                                <div class="input-line">
+                                    <input type="number" name="number" id="card-number-debit" class="card-input card-number" placeholder="Número do Cartão">
+                                </div>
+                                <div class="input-line">
+                                    <input type="text" name="date" id="card-date-debit" class="card-input card-date" placeholder="mm/aa">
+                                    <input type="number" name="code" id="card-code-debit" class="card-input card-code" placeholder="CVV">
+                                </div>
+                            </form>
+                            <div class="help">
+                                <h2>Onde Encontrar?</h2>
+                                <img src="imgs/card.PNG" id="card-img" alt="card">
+                            </div>
+                        </div>
+                        <input type="button" value="Adicionar" class="btn" onclick="showPayment()">
+                    </div>
+
+                    <!-- Pix -->
+
+                    <div  class="form-pay" id="pix-box">
+                        <div class="payment-methods">
+                            <div class="option-method">
+                                <h2>Copia e Colar</h2>
+                                <p>copie o código numerico a abaixo ou escaneie qrCode no aplicativo de seu banco.</p>
+                                <p class="code-txt">GHRWFDIVJEIEFG74RY87TEF</p>
+                                <input type="button" value="Copiar" class="btn">
+                            </div>
+                            <div class="help">
+                                <h2>Escaneie</h2>
+                                <img src="imgs/qrcode.jpeg" alt="QrCode" id="qrcode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--   Boleto  -->
+
+                    <div class="form-pay">
+                        <div class="payment-methods boleto" id="boleto-box">
+                            <h2>Boleto</h2>
+                            <p>Basta realizar o pagamento do boleto, copie o código de barras ou imprima o boleto.</p>
+                            <br>
+                            <p>Vencimento em até 2 dias.</p>
+                            <p class="code-txt">GHRWFDIVJEIEFG74RY87TEF</p>
+                            <input type="button" value="Copiar código de barras" class="btn">
+                            <input type="button" value="Imprimir" class="btn btn-alt">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="check">
+        <!--  Resumo do Pedido  -->
+            <div class="info-box">
+                <h1>Resumo do pedido</h1>
+                <div class="checkout-info">
+                    <p>CEP:</p>
+                    <p id="p-cep">---</p>
+                </div>
+                <div class="checkout-info">
+                    <p>Entrega:</p>
+                    <p id="p-price">---</p>
+                </div>
+                <hr>
+                <div class="checkout-info">
+                    <p>Itens:</p>
+                    <p id="p-item">---</p>
+                </div>
+                <div class="checkout-info">
+                    <p>Pagamento:</p>
+                    <p id="p-payment">---</p>
+                </div>
+                <hr>
+                <div class="checkout-info">
+                    <p>Total:</p>
+                    <p id="p-total">---</p>
+                </div>
+                <a href="compraconcluida.html"><input type="button" value="Finalizar Compra" class="btn" onclick="validation()"></a>
+            </div>
+        </section>
+    </main>
+    <script src="script/hideShow.js"></script>
+    <script src="script/searchCEP.js"></script>
+    <script src="script/verifyInformation.js"></script>
+    <script src="script/paymentMethods.js"></script>
+</body>
+</html>

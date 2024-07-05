@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorito</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="favorito.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!---Header PC-->
+  <header>
+    <div id="navbarGeral" style="position: fixed;top:0;left: 0;">
+      <div id="navbarRight">
+        <a id="logo" href="index.html"><img src="images/logo-white.png" width="43%"></a>
+      </div>
+      <div id="navbarCenter">
+        <input type="text" placeholder="Pesquisar" id="barraPesquisa">
+        <div id="btPesquisa">
+          <a href="pesquisa.html">
+          <img src="images/lupa (1).png" alt="Lupa" id="lupa">
+          </a>
+        </div>
+      </div>
+      <div id="navbarLeft"> 
+        <div class="divBtNav">
+          <a href="carrinho.html">
+            <img src="images/bolsa-de-compras.png" alt="Carrinho" class="imgIcone">
+          </a>
+        </div>
+        <div class="divBtNav" id="iconFav">
+          <a href="favorito.html">
+            <img src="images/favorito.png" alt="Favorito" class="imgIcone" href="favorito.html">
+          </a>
+        </div>
+        <div class="divBtNav">
+          <a href="login.html" class="botoesNav">
+            <img src="images/adicionar-usuario.png" alt="Usuário" class="imgIcone" id="iconEntrar">
+            Entrar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!---Header PC-->
+
+  <!---Header MOBILE-->
+  <header>
+    <div id="navbarGeralMobile" class="container px-4" style="position: fixed;top:0;left: 0;">
+      <div class="row mt-2">
+        <div class="col float-start">
+          <a href="carrinho.html">
+            <img src="images/bolsa-de-compras.png" alt="Carrinho" class="imgCarrinho">
+          </a>
+        </div>
+        <div class="col mx-0 d-flex alinharIcones">
+          <a href="index.html"><img src="images/logo-white.png" class="logo"></a>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <a href="login.html" class="botoesNav">
+            <img src="images/adicionar-usuario.png" alt="Usuário" class="imgLogin">
+          </a>
+        </div>
+      </div>
+      <div class="row mt-2 mb-15">
+        <div class="pesquisar d-flex alinharIcones">
+          <input type="text" placeholder="Pesquisar" id="barraPesquisa">
+          <div id="btPesquisa">
+            <a href="pesquisa.html">
+              <img src="images/lupa (1).png" alt="Lupa" id="lupa">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!---Header MOBILE-->
+    <main style="margin-top: 11.5vh;">
+
+        <div class="favh1">
+            <h1>Favoritos</h1>
+            <hr>
+        </div>
+
+        <div class="ordenar" id="ordenar-container">
+            <h1>ORDENAR POR</h1>
+            <svg width="15" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 2.26115L2.21875 0L12.5 10.4777L22.7812 0L25 2.26115L12.5 15L0 2.26115Z" fill="#3D5885" />
+            </svg>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="#">Nike</a>
+                <a href="#">Adidas</a>
+                <a href="#">Vans</a>
+                <a href="#">Puma</a>
+                <a href="#">Coonverse</a>
+                <a href="#">New balance</a>
+            </div>
+        </div>
+
+        <div class="container-geral">
+            <div id="adidas" class="container-favorito">
+                <img src="images/dunk-removebg-preview.png" alt="">
+                <h2>ADIDAS SAMBA OG</h2>
+                <p>R$699,99</p>
+                <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+            </div>
+            <div id="fav2" class="container-favorito">
+                <img src="images/dunk-removebg-preview.png" alt="">
+                <h2>ADIDAS SAMBA OG</h2>
+                <p>R$699,99</p>
+                <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+            </div>
+            <div id="fav3" class="container-favorito">
+                <img src="images/dunk-removebg-preview.png" alt="">
+                <h2>ADIDAS SAMBA OG</h2>
+                <p>R$699,99</p>
+                <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+            </div>
+        </div>
+
+        <footer class="mx-0 mt-5">
+            <div class="container-fluid m-0 p-0">
+              <div class="d-flex flex-column flex-md-row receberNovidades m-0 px-3">
+                <div class="col-md-4 mt-2 p-0"> <!--col-4 serve para <576px, col-sm-4 >= 576px -->
+                  <h3>QUER<br>RECEBER <span style="color: #84A1F0;">NOVIDADES?</h3> </span>
+                </div>
+                <div class="col-md-8 d-flex mb-3 mt-1">
+                  <input type="text" class="form-control" placeholder="seuemail@gmail.com" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <button type="button" class="btn btn-primary ms-2">QUERO!</button>
+                </div>
+              </div>
+              <div class="d-flex flex-column flex-md-row infoRodape mx-0 ms-0 py-3">
+                <div class="col-md-4 px-5">
+                  <img src="images/logo-white.png" class="logoRodape" alt="logo">
+                  <hr>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed leo sit amet lacus facilisis tincidunt. Phasellus at venenatis justo. Phasellus varius iaculis nisl et egestas. Nulla facilisi. Pellentesque sollicitudin porta fringilla. Duis neque mauris, gravida eget venenatis at, ullamcorper a.</p>
+                </div>
+                <div class="col-md-4 d-flex px-5 float-left">
+                  <div class="row mx-0">
+                    <h2>TÊNIS</h2>
+                    <hr>
+                    <a href="">Nike</a>
+                    <a href="">Adidas</a>
+                    <a href="">Vans</a>
+                    <a href="">Puma</a>
+                    <a href="">Coonverse</a>
+                    <a href="">New Balance</a>
+                  </div>
+                </div>
+                <div class="col-md-4 ms-0 mt-1">
+                  <div class="redesocial d-flex justify-content-center p-3">
+                    <img src="images/icons/white-facebook.png" alt="">
+                    <img src="images/icons/white-instagram.png" alt="">
+                    <img src="images/icons/white-twitter.png" alt="">
+                    <img src="images/icons/white-youtube.png" alt="">
+                  </div>
+                  <div class="d-flex whatsapp mt-2 mb-5">
+                    <button type="button" class="btn btn-primary">Esta com dúvidas ?</button>
+                  </div>
+                </div>
+              </div>
+              <div class="bandeiras row d-flex align-items-center mx-3">
+                <img class="col-3" src="images/pix.jpg" alt="">
+                <img class="col-3" src="images/mastercard-2019.webp" alt="">
+                <img class="col-3" src="images/hipercard.png" alt="">
+                <img class="col-3" src="images/elo.png" alt="">
+              </div>
+              <div class="row d-flex align-items-center final mx-2 mt-2 mb-2">
+                <div class="col-4">
+                  <img src="images/brasil.png" alt="Bandeira do Brasil">
+                </div>
+                <div class="col-4">
+                  <p>Copyright © 2024</p>
+                </div>
+                <div class="col-4">
+                  <p>Desenvolvido por 404ErrorClub</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+        <script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const ordenarContainer = document.getElementById('ordenar-container');
+    const dropdownContent = document.getElementById('dropdown-content');
+    const adidasItems = document.querySelectorAll('.container-geral #adidas'); 
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show');
+    }
+
+    ordenarContainer.addEventListener('click', function() {
+        toggleDropdown();
+        const rect = ordenarContainer.getBoundingClientRect();
+        dropdownContent.style.top = rect.bottom + 'px';
+        dropdownContent.style.left = rect.left + 'px';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (!ordenarContainer.contains(event.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+
+    window.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            dropdownContent.classList.remove('show');
+        }
+    });
+
+    dropdownContent.querySelectorAll('a').forEach(function(option) {
+        option.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            const marcaSelecionada = option.textContent.trim().toLowerCase(); 
+            document.querySelectorAll('.container-geral .container-favorito').forEach(function(item) {
+                const nomeMarca = item.querySelector('h2').textContent.trim().toLowerCase();
+                if (marcaSelecionada === 'todos' || nomeMarca.includes(marcaSelecionada)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            dropdownContent.classList.remove('show');
+        });
+    });
+});
+
+        </script>
+
+        <script src="script.js"></script>
+    </body>
+</html>

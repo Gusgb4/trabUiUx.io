@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/css/log-style.css">
+    <title>Entrar</title>
+</head>
+<body>
+    <section>
+        <h1>Entrar</h1>
+        <div class="input-box log-box">
+            <img src="imgs/mail.svg" alt="name" class="input-img">
+           <input type="email" name="email" id="input-email" class="ipt" placeholder="Email">           
+        </div>
+        <p class="alert-input" id="alert-email"></p>
+        <div class="input-box log-box">
+            <img src="imgs/lock.svg" alt="name" class="input-img">
+            <input type="password" name="email" id="input-password" class="ipt" placeholder="Senha">            
+        </div>
+        <p class="alert-input" id="alert-password"></p>
+        <div class="input-box log-box" id="alter-box">
+            <a href="ForgotPassword.html" class="alter-password">Esqueceu a senha?</a>
+        </div>
+        <p id="alert-confirm"></p>  
+        <div class="log-box">
+            <input type="button" value="Continuar" class="btn" onclick="logInUser()">
+        </div>     
+        <a href="register.html" class="register-btn">Novo por aqui? Crie sua conta</a>
+    </section>
+    <script src="script/login-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body, html{
+    margin: 0;
+}
+
+/* compra */
+#geralProduto{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+   /* background-color: #ffffff;*/
+  
+}
+
+#imgProduto{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+   
+    
+   /* background-color: #3f538a; */
+    text-align: center;
+
+}
+
+#fotoPrincipal{
+    width: 100%;
+    height: 75%;
+    /* background-color: #b5c8ff; */
+}
+#fotoSecundarias{
+    width: 100%;
+    height: 25%;
+    /* background-color: #e0e8ff; */
+
+    display: flex;
+    gap: 1%;
+    margin-top: 1%;
+
+}
+#fotoPrincipal img, #fotoSecundarias img {
+    cursor: pointer;
+}
+#imgFotoPrincipal{
+    margin-top: 3%;
+}
+#descriProduto{
+    height: 100%;
+    width: 42%;
+
+  /* background-color: #ffb9b9; */
+}
+
+#fotoSecundaria1{
+margin-left: 15%;
+}
+
+.titulo{
+    /* background-color: #c2d9ff; */
+    
+    margin-top: 7%;
+}
+#nomeProduto{
+    font-size: 55px;
+    width: 70%;
+}
+
+.tamanhos{
+height: 33%;
+/* background-color: #c5ffda; */
+}
+
+.divBtnTamanhos{
+width: 70%;
+height: 21%;
+
+}
+.btnTamanho{
+    font-size: x-large;
+    color: #1d2023;
+    width: 20%;
+    height: 100%;
+    margin-right: 10px;
+    border: 2px solid #84A1F0;
+    transition: transform 0.2s, background-color 0.2s;
+    background-color: white;
+
+}
+.btnTamanho:hover{
+    background-color: #84A1F0;
+    color: white;
+    transform: scale(1.02);
+}
+#divBtCompraTotal{
+    display: flex;
+    height: 18%;
+    gap: 7%;
+  }
+#btnComprar{
+    width: 35%;
+    font-size: large;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: #84A1F0;
+    transition: transform 0.2s, background-color 0.2s;
+ 
+    
+}
+#btnComprar:hover{
+    /* outline: 2px solid rgb(30, 65, 169); */
+    background-color: #0d6efd;
+    transform: scale(1.02);
+
+}
+.btnMaisMenos{
+    width: 45px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+#contador{
+   
+   padding: 9px;
+   font-size: large;
+  
+
+}
+.calcularFrete{
+    width: 70%;
+    height: 33%;
+    margin-top: 4%;
+    /* background-color: #b5c8ff; */
+}
+#inputCep{
+    margin-top: 1%;
+    width: 50%;
+    height:18% ;
+    margin-right: 5%;
+}
+#btnCalcularCep{
+    height:18% ;
+    width: 30%;
+    border-radius: 5px;
+margin-left: 2%;
+color: white;
+background-color: #84A1F0;
+border: none;
+transition: transform 0.2s, background-color 0.2s;
+
+}
+#btnCalcularCep:hover{
+    background-color: #0d6efd;
+    transform: scale(1.02);
+}
+
+.txtDescriProduto{
+    text-align: center;
+    width: 99vw;
+    margin-top: 4%;
+/* background-color: #616a74; */
+}
+.tituloDescri{
+    color: gray;
+    margin: 0 auto;
+}
+.pDescri{
+  margin-top: 2%;
+  color: rgb(73, 73, 73);
+  text-align: justify;
+  display: inline-block; 
+  max-width: 60%; 
+}
+
+@media (max-width:431px) {
+
+
+    #geralProduto{
+        display: block;
+        height: 58vh;
+    }
+    #imgProduto{
+        width: 100%;
+    }
+    #fotoPrincipal{
+        height: 63%;
+    }
+    #fotoSecundarias{
+        width: 30%;
+        height: 24.5%;
+        gap: 3%;    
+    }
+    /* ----------------------------- */
+    .txtDescriProduto{
+        margin-top: 130%;
+    }
+  /* ----------------------------- */
+  #descriProduto{
+    width: 90%;
+    margin-left: 8%;
+}
+.titulo{    
+    margin-top: 0;
+}
+
+#nomeProduto{
+    font-size: 45px;
+    width: 100%;
+}
+.divBtnTamanhos{
+    width: 85%;
+    height: 23%;
+
+}
+.btnTamanho{
+    font-size: medium;
+    margin-right: 3%;
+
+}
+#divBtCompraTotal{
+    height: 18%;
+    gap: 11%;
+  }
+  #btnComprar{
+    width: 40%;
+    font-size: medium;
+}
+#contador{
+    padding: 4px;
+    font-size: medium;
+ }
+ .calcularFrete{
+    width: 90%;
+}
+ #inputCep{
+    margin-top: 2%;
+    width: 48%;
+    height:17% ;
+    margin-right: 4%;
+}
+#btnCalcularCep{
+    height:17% ;
+    width: 35%;
+    font-size: small;
+}
+
+.tituloDescri{
+    margin: 0 auto;
+}
+.pDescri{
+    margin-top: 5%;
+    max-width: 90%; 
+  }
+
+}
+@media (max-width:376px) {
+
+    #geralProduto{
+        height: 55vh;
+    }
+    #fotoSecundarias{
+        margin-left: 2%;   
+    }
+
+    #descriProduto{
+        margin-left: 8%;
+        margin-bottom: 2%;
+    }
+    #nomeProduto{
+        font-size: 35px;
+    }
+    #divBtCompraTotal{
+        height: 23%;
+        gap: 11%;
+      }
+      .calcularFrete{
+        height: 36%;
+        margin-top: 13%;
+    }
+    .txtDescriProduto{
+        margin-top: 138%;
+    }
+    .pDescri{
+        margin-top: 5%;
+        max-width: 80%; 
+      }
+}
+
+/* compra */
+
+
+
+
+/*---------------------------------------------------*/
+
+/* footer */
+
+.navbar navbar-light {
+    border-radius: 0px;
+    background: #e0e0e0;
+    box-shadow: -26px 26px 52px #7b7b7b,
+        26px -26px 52px #ffffff;
+}
+.navbar {
+    background-color: #3D5885;
+    color: #e0e0e0;
+}
+.novidades {
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.novidades h1 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+.quero {
+    margin-left: 200px;
+    display: flex;
+    text-align: center;
+}
+.quero input {
+    width: 400px;
+    height: 30px;
+}
+.quero button {
+    text-align: center;
+    background-color: #84A1F0;
+    border: none;
+    font-weight: 700;
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+}
+.rodape {
+    background-color: #202020;
+    display: flex;
+    height: 300px;
+    width: 100%;
+}
+.rodape1 {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.rodape p {
+    color: #ffffff;
+    max-width: 400px;
+}
+.rodape2 h2 {
+    color: #84A1F0;
+    margin-top: 50px;
+}
+.rodape hr {
+    border: 1px solid#555555;
+}
+.rodape2 a {
+    display: grid;
+    text-decoration: none;
+    color: #ffffff;
+}
+.rodape2 {
+    margin-left: 100px;
+}
+.desenvolvido {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 1px;
+}
+.rodape3 img {
+    width: 30px;
+    margin-top: 50px;
+}
+.rodape3 {
+    margin-left: 300px;
+}
+.botao button {
+    background-color: #3CE87C;
+    border: none;
+    width: 200px;
+    margin-top: 50px;
+}
+.rodape-pay img {
+    display: flex;
+    height: 50px;
+}
+.rodape-pay {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 15px;
+}
+
+/*------FOOTER NOVO v2-------*/
+
+footer {
+    width: 100%;
+}
+
+.receberNovidades {
+    background-color: #555555;
+    width: 100%;
+    height: 5vw;
+    align-items: center;
+}
+
+.receberNovidades input{
+    width: fit-content;
+    padding-right: 25%;
+    margin-left: 25%;
+}
+
+.receberNovidades h3{
+    color: white;
+    width: 100%;
+    margin-left: 25%;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-bottom: 0;
+}
+
+.receberNovidades button{
+    background-color: rgba(132, 161, 240, 1);
+    border: none;
+    font-weight: 600;
+}
+
+.infoRodape{
+    background-color: #202020;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoRodape h2{
+    color: rgba(132, 161, 240, 1);
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.7vw;
+}
+
+.infoRodape p, .infoRodape a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+
+.infoRodape hr {
+    width: 50%;
+    height: 1px;
+    border: 1px solid#555555;
+}
+
+.redesocial img{
+    height: auto;
+    width: 2vw;
+}
+
+/* footer */
+/* ----------------------------------------------------------------------- */
+/* carrossel */
+#destaquesGeral{
+    width: 100%;
+    height: 50vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    gap: 0%;
+    
+}
+
+
+
+.divImgEstoq{
+    width: auto;
+    height: 60%;
+    border: 2px solid white;
+}
+
+.NomeDestaque{
+    font-size: 18px;
+    margin-top: 1.5%;
+    margin-bottom: 0.5%;
+}
+
+.espDestaq{
+    opacity: 75%;
+    margin-bottom: 2%;
+    font-size: 13px;
+}
+
+.PreçoDestaq{
+    font-size: 20px;
+    margin: 0;
+}
+
+.destaqInd, .destaqInd2, .destaqInd3{
+max-width: 100%;
+height: auto;
+background-color: rgb(222, 222, 222);
+padding: 10px;
+box-sizing: border-box;
+color: darkslategray;
+font-size: 17px;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+text-decoration: none;
+}
+
+#divTxtDescri{
+    height: 20%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+#divbtComprar{
+    display: flex;
+    justify-content: center;
+}
+
+.btComprar{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 5vh;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #84A1F0;
+    text-decoration: none;
+}
+
+#prevBtn, #nextBtn{
+    background-color: #ffffff;
+    border: none;
+}
+#prevBtn2, #nextBtn2{
+    background-color: #ffffff;
+    border: none;
+}
+#prevBtn3, #nextBtn3{
+    background-color: #ffffff;
+    border: none;
+}
+
+.titulos{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 5vh;
+    margin-left: 10%;
+    color: #3f538a;
+}
+
+
+
+/*----- TENIS ------*/
+.container-maior{
+    margin-top: 5%;
+}
+
+.container-geral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-right: 2%;
+    }
+    
+.container-geral img{
+    width: 100%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
+}
+
+.container-geral button{
+    background-color: #84A1F0;
+    color: #fff;
+    font-size: 120%;
+    font-weight: 500;
+    border-radius: 0px;
+    border: none;
+    width: 80%;
+}
+
+.container-favorito{
+    background-color: #E7E7E7;
+    margin-inline-start: 3%;
+    height: 61vh;
+    height: 35vw;
+    width: 50vh;
+    text-align: center;
+}
+
+.container-favorito h2{
+    text-align: left;
+    font-family: 'Inter';
+    font-size: 130%;
+    font-weight: 700;
+    margin-top: -15%;
+    margin-left: 10%;
+    margin-bottom:-0.5%;
+}
+
+.container-favorito p{
+    text-align: left;
+    margin-left: 10%;
+    font-family: 'K2D';
+    font-weight: 600;
+    font-size: 130%;
+    margin-bottom: 15%;
+}
+
+/*----- TENIS ------*/
+/*---------------------*/
+
+@media screen and (max-width: 768px){
+
+    .titulos{
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 3vh;
+        margin-top: 5%;
+        margin-left: 10%;
+        color: #3f538a;
+    }
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --color-01:#3D5885;
+    --color-02: #84A1F0;
+    --color-03: #FFF;
+    --alert-color: #a11414;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%;
+    background-image: url(../imgs/bg.PNG);
+    background-repeat:no-repeat;
+    background-size: 1380px;
+    background-position:center top;
+}
+
+section{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-03);
+    border: 2px solid var(--color-02);
+    box-shadow: 3px 3px 4px #000;
+    border-radius: 30px;
+
+}
+
+h1{ 
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+h2{
+    font-size: 1.35em;
+    padding: 10px;
+}
+
+.e-mail{
+    width: 50%;
+    padding: 2px;
+    border-radius: 7px;
+    border: 1px solid var(--color-01);
+    font-size: 13px;
+    margin: 8px;
+}
+
+.continuar{
+    width: 50%;
+    padding: 2px;
+    border-radius: 7px;
+    border: 1px solid var(--color-01);
+    font-size: 13px;
+    margin: 7px;
+}
+
+.voltar{
+    width: 50%;
+    padding: 2px;
+    font-size: 14px;
+}
+
+#alert-email{
+    color: var(--alert-color);
+    font-size: 13px;
+}
+

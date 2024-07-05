@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/headerfooter.css">
+  <link rel="stylesheet" href="css/tenis.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <!---Header PC-->
+  <header>
+    <div id="navbarGeral" style="position: fixed;top:0;left: 0;">
+      <div id="navbarRight">
+        <a id="logo" href="index.html"><img src="images/logo-white.png" width="43%"></a>
+      </div>
+      <div id="navbarCenter">
+        <input type="text" placeholder="Pesquisar" id="barraPesquisa">
+        <div id="btPesquisa">
+          <a href="pesquisa.html">
+          <img src="images/lupa (1).png" alt="Lupa" id="lupa">
+          </a>
+        </div>
+      </div>
+      <div id="navbarLeft"> 
+        <div class="divBtNav">
+          <a href="carrinho.html">
+            <img src="images/bolsa-de-compras.png" alt="Carrinho" class="imgIcone">
+          </a>
+        </div>
+        <div class="divBtNav" id="iconFav">
+          <a href="favorito.html">
+            <img src="images/favorito.png" alt="Favorito" class="imgIcone" href="favorito.html">
+          </a>
+        </div>
+        <div class="divBtNav">
+          <a href="login.html" class="botoesNav">
+            <img src="images/adicionar-usuario.png" alt="Usuário" class="imgIcone" id="iconEntrar">
+            Entrar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!---Header PC-->
+
+  <!---Header MOBILE-->
+  <header>
+    <div id="navbarGeralMobile" class="container px-4" style="position: fixed;top:0;left: 0;">
+      <div class="row mt-2">
+        <div class="col float-start">
+          <a href="carrinho.html">
+            <img src="images/bolsa-de-compras.png" alt="Carrinho" class="imgCarrinho">
+          </a>
+        </div>
+        <div class="col mx-0 d-flex alinharIcones">
+          <a href="index.html"><img src="images/logo-white.png" class="logo"></a>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <a href="login.html" class="botoesNav">
+            <img src="images/adicionar-usuario.png" alt="Usuário" class="imgLogin">
+          </a>
+        </div>
+      </div>
+      <div class="row mt-2 mb-15">
+        <div class="pesquisar d-flex alinharIcones">
+          <input type="text" placeholder="Pesquisar" id="barraPesquisa">
+          <div id="btPesquisa">
+            <a href="pesquisa.html">
+              <img src="images/lupa (1).png" alt="Lupa" id="lupa">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!---Header MOBILE-->
+
+  <main>
+    <div id="geralProduto" style="margin-top: 15vh;">
+
+      <div id="imgProduto">
+        <div id="fotoPrincipal">
+          <img id="imgFotoPrincipal" src="images/tenis-lula-molusco-principal.png"  alt="foto Produto" width="auto" height="85%">
+        </div>
+        <div id="fotoSecundarias">
+          <img id="fotoSecundaria1" src="images/tenis-lula-molusco-dois.png" onclick="trocarImagem('fotoSecundaria1')" alt="foto Produto"    width="auto"  height="64%">
+          <img id="fotoSecundaria2" src="images/tenis-lula-molusco-tres.jpeg" onclick="trocarImagem('fotoSecundaria2')"alt="foto Produto" width="auto" height="63%">
+          <img id="fotoSecundaria3" src="images/tenis-lula-molusco-quatro.png" onclick="trocarImagem('fotoSecundaria3')" alt="foto Produto" width="auto" height="63%">
+
+        </div>
+
+      </div>
+
+      <div id="descriProduto">
+        <div class="titulo">
+          <h1 id="nomeProduto">TÊNIS LULA MOLUSCO NIKE</h1>
+          <h2 id="precoProduto">R$ 1.999.54</h2>
+          <p style="opacity: 70%;">(Em até 12x de 166,62)</p>
+          <hr width="85%" size="3">
+        </div>
+
+        <div class="tamanhos">
+          <div style="display: flex; gap: 1%;margin-top: 1%">
+          <h5 id="h5Tamanho">Tamanho:</h5>
+          <p id="destino" style="opacity: 80%; ;"></p>
+        </div>
+          <div class="divBtnTamanhos">
+            <button  class="btnTamanho" id="39" onclick="imprimir(39)">39</button>
+            <button  class="btnTamanho" id="40" onclick="imprimir(40)">40</button>
+            <button  class="btnTamanho" id="41" onclick="imprimir(41)">41</button>
+            <button  class="btnTamanho" id="42" onclick="imprimir(42)">42</button>
+          </div>
+
+          <p style="margin-top: 2%; color: #3D5885;">
+            <a style="text-decoration: none; color:#3D5885 ;" href="">Formas de pagamento</a><br>5% de desconta á
+            vista
+          </p>
+
+        <div id="divBtCompraTotal">
+          <a href="carrinho.html" class="">
+            <button id="btnComprar">COMPRAR</button>
+          </a>          
+          <div class="quantidade" style="display: flex; gap: 5%;">
+          <button class="btnMaisMenos" onclick="diminuirContador()" id="diminuir">-</button>
+          <p id="contador">1</p>
+          <button class="btnMaisMenos" onclick="aumentarContador()" id="aumentar">+</button>
+           </div>
+          <h5 id="totalPagar"></h5>
+        </div>
+
+      </div>
+      <div class="calcularFrete">
+        <h4 style="margin-bottom: 0 ; ">CALCULAR FRETE</h4>
+        
+        <input placeholder="CEP" type="text" name="" id="inputCep">
+        <button id="btnCalcularCep" onclick="validarCEP()">CALCULAR</button>
+       
+         <div style="display: flex; gap: 10%;">
+          <p id="aviso"  ></p>   <span id="frete"></span>
+       </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+      <div class="txtDescriProduto">
+    <h2 class="tituloDescri">DESCRIÇÃO</h2>
+ <p class="pDescri">Em 1999, o mundo se apaixonou por uma esponja incuravelmente otimista. 20 anos, mais de 200 episódios e inúmeros memes depois, Bob Esponja Calça Quadrada continua a inspirar alegria, conectando-se com gerações de superfãs, como Kyrie Irving. Em colaboração com a Nickelodeon, a coleção Kyrie x Bob Esponja Calça Quadrada celebra o amor de Kyrie por um dos programas de televisão mais memoráveis e um fenômeno cultural, trazendo a Fenda do Biquíni para a quadra de basquete ... e além! Em colaboração com a Nickelodeon, o Kyrie 5 'Lula Molusco' chega nos tons turquesa icônicos do polvo. *Habilidades com clarinete não incluídas.</p>
+ 
+ 
+      </div>
+   
+ 
+   <h2 class="titulos" style="margin-top: 7vh; color: black;">PRODUTOS SIMILARES</h2>
+
+   <div class="container-maior">
+    <div class="container-geral">
+      <div class="container-favorito">
+          <img src="images/tenis/AJ1-LOWCOURTPURPLE.png" alt="AIR JORDAN 1 LOW COURT PURPLE">
+          <h2>NIKE AJ1 LOW COURT PURPLE</h2>
+          <p>R$1.699,99</p>
+          <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+      </div>
+      <div class="container-favorito">
+          <img src="images/tenis/TRAVIS SCOTT X NIKE SB DUNK LOW CACTUS JACK.png" alt="TRAVIS SCOTT X NIKE SB DUNK LOW CACTUS JACK">
+          <h2>TRAVIS SCOTT X NIKE SB DUNK LOW CACTUS JACK</h2>
+          <p>R$11.998,90</p>
+          <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+      </div>
+      <div class="container-favorito">
+        <img src="images/tenis/AJ1-LOWVINTAGEGRAY.PNG" alt="LOW VINTAGE GRAY">
+        <h2>NIKE AJ1 LOW VINTAGE GRAY</h2>
+        <p>R$1.199,99</p>
+        <button type="button" class="btn btn-primary">COMPRE AGORA</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</main>
+
+
+
+<footer>
+    <div class="container-fluid m-0 p-0">
+      <div class="d-flex flex-column flex-md-row receberNovidades m-0 px-3">
+        <div class="col-md-4 mt-2 p-0"> <!--col-4 serve para <576px, col-sm-4 >= 576px -->
+          <h3>QUER<br>RECEBER <span style="color: #84A1F0;">NOVIDADES?</h3> </span>
+        </div>
+        <div class="col-md-8 d-flex mb-3 mt-1">
+          <input type="text" class="form-control" placeholder="seuemail@gmail.com" aria-label="Username"
+            aria-describedby="basic-addon1">
+          <button type="button" class="btn btn-primary ms-2">QUERO!</button>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-md-row infoRodape mx-0 ms-0 py-3">
+        <div class="col-md-4 px-5">
+          <img src="images/logo-white.png" class="logoRodape" alt="logo">
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed leo sit amet lacus facilisis tincidunt. Phasellus at venenatis justo. Phasellus varius iaculis nisl et egestas. Nulla facilisi. Pellentesque sollicitudin porta fringilla. Duis neque mauris, gravida eget venenatis at, ullamcorper a.</p>
+        </div>
+        <div class="col-md-4 d-flex px-5 float-left">
+          <div class="row mx-0">
+            <h2>TÊNIS</h2>
+            <hr>
+            <a href="">Nike</a>
+            <a href="">Adidas</a>
+            <a href="">Vans</a>
+            <a href="">Puma</a>
+            <a href="">Coonverse</a>
+            <a href="">New Balance</a>
+          </div>
+        </div>
+        <div class="col-md-4 ms-0 mt-1">
+          <div class="redesocial d-flex justify-content-center p-3">
+            <img src="images/icons/white-facebook.png" alt="">
+            <img src="images/icons/white-instagram.png" alt="">
+            <img src="images/icons/white-twitter.png" alt="">
+            <img src="images/icons/white-youtube.png" alt="">
+          </div>
+          <div class="d-flex whatsapp mt-2 mb-5">
+            <button type="button" class="btn btn-primary">Esta com dúvidas ?</button>
+          </div>
+        </div>
+      </div>
+      <div class="bandeiras row d-flex align-items-center mx-3">
+        <img class="col-3" src="images/pix.jpg" alt="">
+        <img class="col-3" src="images/mastercard-2019.webp" alt="">
+        <img class="col-3" src="images/hipercard.png" alt="">
+        <img class="col-3" src="images/elo.png" alt="">
+      </div>
+      <div class="row d-flex align-items-center final mx-2 mt-2 mb-2">
+        <div class="col-4">
+          <img src="images/brasil.png" alt="Bandeira do Brasil">
+        </div>
+        <div class="col-4">
+          <p>Copyright © 2024</p>
+        </div>
+        <div class="col-4">
+          <p>Desenvolvido por 404ErrorClub</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
