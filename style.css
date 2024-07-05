@@ -101,7 +101,7 @@ height: 21%;
     gap: 7%;
   }
 #btnComprar{
-    width: 35%;
+    width: 100%;
     font-size: large;
     border: none;
     border-radius: 7px;
